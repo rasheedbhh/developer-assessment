@@ -15,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    broadcast(new ChatAppDemoEvent('rasheed did this'));
     return view('welcome');
 });
