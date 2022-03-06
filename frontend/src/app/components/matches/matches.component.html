@@ -1,27 +1,16 @@
-<!--This component will be displayed only when we are in the home route -->
+
 <div class="container mt-3" id="top-bar">
     <div class="row">
-        <h3 class="text-center">Matches <span class="number">4</span> </h3>
-    
-        <div class="col-xl-1 col-xs-3 col-md-3 col-3">
-            <img src="assets/images/girl1.jpg" alt="">
-           <p class="name">Yara</p> 
-        </div>
-        <div class="col-xl-1 col-xs-3 col-md-3 col-3 ">
-            <img src="assets/images/girl2.jpg" alt="">
-           <p class="name">Sandra</p> 
-        </div>
-        <div class="col-xl-1 col-xs-3  col-3 col-3">
-            <img src="assets/images/girl3.jpg" alt="">
-           <p class="name">Moneera</p> 
-        </div>
-        <div class="col-xl-1 col-xs-3 col-3">
-            <img src="assets/images/girl4.jpg" alt="">
-          <p class="name">Najwa</p>  
-        </div>
+        <h3 class="text-center">Matches <span class="number">{{users.length}}</span> </h3>
+        
+        <!--Looping through the users array and displaying the results-->
+        <div class="col-xl-1 col-xs-3 col-md-3 col-3" *ngFor="let user of users">
+            <img src="{{user.image}}" alt="">
+           <p class="name">{{user.name}}</p> 
+       
     </div>
 </div>
-<!--This is the template for each user message and I can display the data of each ofn the users in the array -->
+<!--This is the template for each user message and I can display the data of each of the users in the array -->
 
 
 <div class="container mt-5" id="chats">

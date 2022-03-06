@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatchesComponent } from './components/matches/matches.component';
 import { ConversationComponent } from './components/conversation/conversation.component';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, {enableTracing:true}), 
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

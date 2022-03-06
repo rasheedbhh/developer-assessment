@@ -4,7 +4,7 @@
            <a routerLink="/"><i class="fas fa-angle-left back"></i> </a> 
         </div>
         <div class="col-6 text-center">
-            <h2>Carla  </h2></div>
+            <h2>{{username}}  </h2></div>
         <div class="col-4 text-center" >
             <img src="assets/images/girl6.jpg" alt="">
         </div>
@@ -85,13 +85,14 @@
         		</div>
         	</div>
                 <div class="chat-footer">
-                    <textarea class="send-message-text" placeholder="Type your message here"></textarea>
+					<form action=""> 
+                    <input type="text" placeholder="Type a message" name="message" [(ngModel)]="inputMessage" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">
                     <label class="upload-file">
                         <input type="file" required="">
                         <i class="fa fa-paperclip"></i>
                     </label>
-                    <button type="button" class="send-message-button btn-success"> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </div>
+                    <button type="submit" class="send-message-button btn-success"> <i class="fa fa-arrow-right" aria-hidden="true" (click)="sendMessage()"></i></button>
+                </form></div>
                  
             </div>
      
