@@ -20,9 +20,11 @@ class ChatEvent implements ShouldBroadcast
      * @return void
      */
     public $message;
+    public $from;
     public function __construct($message)
     {
         $this->message = $message;
+     
     }
 
     /**
