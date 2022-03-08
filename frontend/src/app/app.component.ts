@@ -7,22 +7,13 @@ import Echo from 'laravel-echo';
 })
 export class AppComponent implements OnInit {
   title = 'ChatApplication';
+  name = "Carla";
+  image = "assets/girl6.jpg";
+  message = "Hey there cowboy!";
   constructor(){
 
   }
   ngOnInit(): void {
-    const echo = new Echo({
-      broadcaster: 'pusher',
-      key: 'anyKey',
-      cluster: 'mt1',
-      wsHost: window.location.hostname,
-      wsPort: 6001,
-      forceTLS: false,    // Important Line
-      disableStats: true,
-    });
-    echo.channel('chat')
-      .listen('ChatEvent', (res:any) => {
-        console.log('Chat Event Data : ', res);
-      });
+
   }
 }

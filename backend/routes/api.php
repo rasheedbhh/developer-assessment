@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'UserController@index');
-
+Route::get('/user', function(Request $request){
+    return $request->user();
+})->middleware('auth:api');
+Route::get('/getUsers','UserController@getUsers' )->middleware('auth:api');
+Route::get('/chat/{id}','UserController@chat' )->middleware('auth:api');
+Route::post('/directMessage', 'MessageController@sendDirectMessage')->middleware('auth:api');

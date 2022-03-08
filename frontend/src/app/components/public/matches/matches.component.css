@@ -1,0 +1,65 @@
+@media screen and (min-width:1024px) {
+    #top-bar{
+    margin-top: 55px;
+    position: relative;
+    
+}
+}
+
+
+#top-bar h3{
+    color: #e31b6d;
+    margin-bottom: 25px;
+}
+.number{
+    background-color: #e31b6d;
+    color: white;
+    border-radius: 50%;
+    padding: 0px 6px 0px 6px;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+#top-bar img{
+width: 80px;
+border-radius: 50%;
+height: 70px;
+
+}
+
+.messagesNumber{
+    background-color: #d2a94e;
+    color: white;
+    border-radius: 50%;
+    padding: 0px 6px 0px 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#chats{
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#chats img{
+    width: 75px;
+    border-radius: 50%;
+    height: 80px;
+}
+
+#info{
+  position: relative;
+  left: 15px;
+}
+
+.time{
+    color: #a4a4a4;
+    font-size: 12px;
+}
+.chat{
+    color: #a4a4a4;
+    font-size: 15px;
+}

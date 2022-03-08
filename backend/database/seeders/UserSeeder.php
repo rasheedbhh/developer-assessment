@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
                 'name'     => 'Laura',
                 'email'    => 'laura@gmail.com',
                 'password' => Hash::make('password'),
-                'image' => 'assets/girl5.jpg',
+                'image' => 'images/girl5.jpg',
                 'created_at' => \Carbon\Carbon::now(),
             ]
         ];

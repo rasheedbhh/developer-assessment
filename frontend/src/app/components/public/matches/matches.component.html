@@ -1,0 +1,40 @@
+<div class="container mt-3" id="top-bar" *ngIf="auth">
+    <div class="row">
+        <h3 class="text-center"> {{auth.name}}'s Matches <span class="number">{{matches.length}}</span> </h3>
+        
+        <!--Looping through the auths array and displaying the results-->
+        <div class="col-xl-1 col-xs-3 col-md-3 col-3" *ngFor="let match of matches">
+            <img src="{{match.image}}" alt="">
+           <p class="name">{{match.name}}</p> 
+       
+    </div>
+</div>
+</div>
+<!--This is the template for each auth message and I can display the data of each of the auths in the array -->
+
+
+<div class="container mt-5" id="chats" *ngIf="users" >
+    <div class="row">
+<h3 class="text-center" style="color: #d2a94e;">{{auth.name}}'s Messages <span class="messagesNumber">
+           {{users.length}}</span></h3>
+<div *ngFor="let user of users"> 
+<a [routerLink]="['chat', user.id]">     
+
+<div class="col-lg-12" id="convo" >
+<div class=" text-center float-start" > 
+    <img src="http://localhost:8000/{{user.image}}" alt="">
+</div>
+
+<div id="info" class="mt-3" > 
+    <h4>{{user.name}}<span class="float-end time">{{user.created_at}}</span></h4>
+    <p class="chat">{{user.email}}</p>
+</div>
+
+</div>
+ </a> 
+</div> 
+</div>
+</div>
+
+
+

@@ -1,7 +1,11 @@
-//created an interface User, which means we can now have variables of type User like we have variables of 
-//type string and int, and user accepts these types of data 
-export interface User{
-    id: number,
-    name:string,
-    image:string
+export class User {
+    constructor(
+        public id:number = 0,
+        public name:string = '',
+        public image:string = '',
+        public email:string =''
+    ){
+
+    }
+   
 }
